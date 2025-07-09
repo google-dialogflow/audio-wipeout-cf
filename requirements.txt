@@ -1,0 +1,9 @@
+functions-framework==3.*
+requests
+google.auth
+google-cloud-bigquery
+google-cloud-storage
+jsondiff
+deepdiff
+black
+storage
