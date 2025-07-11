@@ -81,7 +81,7 @@ To run and test the function on your local machine, you first need to authentica
 3.  **Install Dependencies:**
     Install the required Python libraries from the `requirements.txt` file.
     ```bash
-    pip3 install -r requirements.txt
+    pip3 install -r src/requirements.txt
     ```
 
 4.  **Run the Function Locally:**
