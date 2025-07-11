@@ -179,6 +179,7 @@ def fetch_redacted_transcripts_and_delete_audio(request):
                     rows_to_insert = [
                         {
                             "session_id": session_id,
+                            "request_timestamp": request_time.isoformat(),
                             "deleted_timestamp": datetime.utcnow().isoformat(),
                         }
                     ]

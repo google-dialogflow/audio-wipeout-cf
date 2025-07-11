@@ -112,6 +112,7 @@ To add a new brand (e.g., "burgerking"), follow these steps:
     CREATE TABLE `foodai-analytics.audio_wipeout_dataset.burgerking_prod_log`
     (
       session_id STRING,
+      request_timestamp TIMESTAMP,
       deleted_timestamp TIMESTAMP
     )
     PARTITION BY DATE(deleted_timestamp);
