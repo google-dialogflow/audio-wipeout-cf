@@ -35,7 +35,7 @@ jobs:
           --gen2 \
           --project=foodai-analytics \
           --region=us-central1 \
-          --source=./ \
+          --source=./src/ \
           --runtime=python311 \
           --entry-point=fetch_redacted_transcripts_and_delete_audio \
           --memory=1Gi \
