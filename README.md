@@ -88,15 +88,14 @@ To run and test the function on your local machine, you first need to authentica
     The Functions Framework allows you to run your Cloud Function on a local web server that emulates the Google Cloud environment.
     Run the following command from inside the `src` directory**
     ```bash
-    functions-framework --source=src/ --target=fetch_redacted_transcripts_and_delete_audio --port=8080
+    functions-framework --target=fetch_redacted_transcripts_and_delete_audio --port=8080
     ```
 
 5.  **Test the Local Function:**
     Once the server is running, you can send a `POST` request to it using a tool like `curl` or Postman. This request mimics the one sent by Cloud Scheduler.
     ```bash
-    curl -X POST http://localhost:8080 \
-      -H "Content-Type: application/json" \
-      -d '{"brand": "mcdonalds"}'
+    curl -X POST 'http://localhost:8080?brand=mcdonalds' \
+      -H "Content-Type: application/json"
     ```
     You should see detailed log output in the terminal where the functions framework is running.
 

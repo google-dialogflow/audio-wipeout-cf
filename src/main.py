@@ -48,11 +48,10 @@ def fetch_redacted_transcripts_and_delete_audio(request):
         return (error_msg, 500)
 
     # --- Get Brand from Request and Load Configuration ---
-    request_json = request.get_json(silent=True)
-    if not request_json or "brand" not in request_json:
-        return ("Bad Request: Missing JSON payload with 'brand' key.", 400)
+    brand = request.args.get("brand").lower()
+    if not brand:
+        return ("Bad Request: Missing request param - 'brand'.", 400)
 
-    brand = request_json["brand"].lower()
     config = BRAND_CONFIGS.get(brand)
 
     if not config:
